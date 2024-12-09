@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Link from "next/link";
+import Image from 'next/image';
 
 const Galeria = () => {
   const images = [1, 2, 3, 4, 5, 6].map(
@@ -19,11 +20,12 @@ const Galeria = () => {
         {/* Modo galería para desktop */}
         <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, index) => (
-            <div key={index} className="relative group overflow-hidden rounded-lg">
-              <img
+            <div key={index} className="relative group overflow-hidden rounded-lg h-64">
+              <Image
                 src={image}
                 alt={`Proyecto ${index + 1}`}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                fill
+                className="object-cover rounded-lg transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
@@ -39,11 +41,12 @@ const Galeria = () => {
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="relative overflow-hidden rounded-lg">
-                  <img
+                <div className="relative overflow-hidden rounded-lg h-64">
+                  <Image
                     src={image}
                     alt={`Proyecto ${index + 1}`}
-                    className="w-full h-auto object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </SwiperSlide>

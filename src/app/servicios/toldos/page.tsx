@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUmbrella, FaSun, FaCog, FaTools, FaShieldAlt, FaQuestionCircle } from 'react-icons/fa';
+import { FaUmbrella, FaSun, FaCog, FaTools, FaShieldAlt } from 'react-icons/fa';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 
 export default function ToldosPage() {

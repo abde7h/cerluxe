@@ -4,30 +4,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Image from 'next/image';
 
 const testimonials = [
   {
-    img: "http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg",
+    img: "/assets/testimonials/testimonial1.jpg",
     text: "Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.",
     name: "EMILIANO AQUILANI",
   },
   {
-    img: "http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg",
+    img: "/assets/testimonials/testimonial2.jpg",
     text: "Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.",
     name: "ANNA ITURBE",
   },
   {
-    img: "http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg",
+    img: "/assets/testimonials/testimonial3.jpg",
     text: "Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.",
     name: "LARA ATKINSON",
   },
   {
-    img: "http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg",
+    img: "/assets/testimonials/testimonial4.jpg",
     text: "Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.",
     name: "IAN OWEN",
   },
   {
-    img: "http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg",
+    img: "/assets/testimonials/testimonial5.jpg",
     text: "Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.",
     name: "MICHAEL TEDDY",
   },
@@ -55,11 +56,14 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div className="shadow-effect bg-white p-6 rounded-lg border border-gray-200 text-center transition-transform transform scale-90 hover:scale-95">
-                <img
-                  className="img-circle w-20 h-20 mx-auto rounded-full mb-3"
-                  src={testimonial.img}
-                  alt={`Testimonial from ${testimonial.name}`}
-                />
+                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                  <Image
+                    src={testimonial.img}
+                    alt={`Testimonial from ${testimonial.name}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <p className="text-gray-600 text-sm mb-3">{testimonial.text}</p>
                 <div className="testimonial-name text-white bg-blue-600 px-4 py-1 text-sm rounded-full shadow-md inline-block">
                   {testimonial.name}

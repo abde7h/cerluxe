@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaIndustry, FaHardHat, FaWarehouse, FaTools, FaShieldAlt, FaQuestionCircle } from 'react-icons/fa';
+import { FaIndustry, FaHardHat, FaWarehouse, FaTools, FaShieldAlt } from 'react-icons/fa';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 
 export default function EstructurasPage() {

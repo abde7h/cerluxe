@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDoorOpen, FaWindowMaximize, FaShieldAlt, FaTools, FaHome, FaQuestionCircle } from 'react-icons/fa';
+import { FaDoorOpen, FaWindowMaximize, FaShieldAlt, FaTools, FaHome } from 'react-icons/fa';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 
 export default function PuertasVentanasPage() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLock, FaTools, FaExchangeAlt, FaShieldAlt, FaDoorOpen, FaQuestionCircle } from 'react-icons/fa';
+import { FaLock, FaTools, FaExchangeAlt, FaShieldAlt, FaDoorOpen } from 'react-icons/fa';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 
 export default function CerrajeriaPage() {

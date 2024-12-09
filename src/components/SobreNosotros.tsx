@@ -1,4 +1,5 @@
 import { Award, Users, Wrench, ThumbsUp } from 'lucide-react';
+import Image from 'next/image';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -87,11 +88,12 @@ const SobreNosotros = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <img
+            <div className="relative h-[400px] w-full">
+              <Image
                 src="/assets/about/team.jpg"
                 alt="Nuestro equipo trabajando"
-                className="rounded-lg shadow-xl"
+                fill
+                className="rounded-lg shadow-xl object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-lg"></div>
             </div>

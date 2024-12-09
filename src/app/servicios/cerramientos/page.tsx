@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaBuilding, FaIndustry, FaTools, FaShieldAlt, FaQuestionCircle } from 'react-icons/fa';
+import { FaHome, FaBuilding, FaIndustry, FaTools, FaShieldAlt } from 'react-icons/fa';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 export default function CerramientosPage() {
   return (

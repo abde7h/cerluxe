@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWindowMaximize, FaCog, FaTools, FaShieldAlt, FaSun, FaQuestionCircle } from 'react-icons/fa';
+import { FaWindowMaximize, FaCog, FaTools, FaShieldAlt, FaSun } from 'react-icons/fa';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 
 export default function PersianasPage() {

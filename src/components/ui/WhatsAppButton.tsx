@@ -1,19 +1,25 @@
+import Image from 'next/image';
+
 const WhatsAppButton = () => {
-    return (
-      <a
-        href="https://wa.me/624321060" // Reemplaza con tu número de WhatsApp
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 bg-green-500 text-white rounded-full p-3 shadow-lg hover:bg-green-600 transition duration-150"
-      >
-        <img
+  return (
+    <a
+      href="https://wa.me/624321060"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-4 right-4 bg-green-500 text-white rounded-full p-3 shadow-lg hover:bg-green-600 transition duration-150"
+    >
+      <div className="relative w-8 h-8">
+        <Image
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
           alt="WhatsApp"
-          className="w-8 h-8"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-contain"
         />
-      </a>
-    );
-  };
-  
-  export default WhatsAppButton;
+      </div>
+    </a>
+  );
+};
+
+export default WhatsAppButton;
   

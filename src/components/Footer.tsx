@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -13,31 +14,31 @@ const Footer = () => {
             <nav className="flex flex-col space-y-3">
               <Link 
                 href="/" 
-                className="hover:text-gray-300 transition-colors duration-200 text-gray-400 hover:translate-x-1 transform transition-transform"
+                className="hover:text-gray-300 text-gray-400 hover:translate-x-1 transform transition duration-200"
               >
                 Inicio
               </Link>
               <Link 
                 href="/servicios" 
-                className="hover:text-gray-300 transition-colors duration-200 text-gray-400 hover:translate-x-1 transform transition-transform"
+                className="hover:text-gray-300 text-gray-400 hover:translate-x-1 transform transition duration-200"
               >
                 Servicios
               </Link>
               <Link 
                 href="/galeria" 
-                className="hover:text-gray-300 transition-colors duration-200 text-gray-400 hover:translate-x-1 transform transition-transform"
+                className="hover:text-gray-300 text-gray-400 hover:translate-x-1 transform transition duration-200"
               >
                 Galería
               </Link>
               <Link 
                 href="/sobre-nosotros" 
-                className="hover:text-gray-300 transition-colors duration-200 text-gray-400 hover:translate-x-1 transform transition-transform"
+                className="hover:text-gray-300 text-gray-400 hover:translate-x-1 transform transition duration-200"
               >
                 Sobre Nosotros
               </Link>
               <Link 
                 href="/contacto" 
-                className="hover:text-gray-300 transition-colors duration-200 text-gray-400 hover:translate-x-1 transform transition-transform"
+                className="hover:text-gray-300 text-gray-400 hover:translate-x-1 transform transition duration-200"
               >
                 Contacto
               </Link>
@@ -99,11 +100,15 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           {/* Logo y Copyright */}
           <div className="flex flex-col items-center space-y-6">
-            <img
-              src="/assets/Logo.png"
-              alt="Logo"
-              className="h-24 w-auto sm:h-28 md:h-32 transition-transform duration-300 hover:scale-105"
-            />
+            <div className="relative w-[120px] h-24 sm:h-28 md:h-32">
+              <Image
+                src="/assets/Logo.png"
+                alt="Logo"
+                fill
+                className="transition-transform duration-300 hover:scale-105 object-contain"
+                priority
+              />
+            </div>
             <p className="text-center text-sm md:text-base text-gray-400">
               &copy; {new Date().getFullYear()} Carpintero Metálico
               <span className="block sm:inline sm:ml-1">
