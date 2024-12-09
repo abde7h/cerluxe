@@ -58,7 +58,7 @@ const Footer = () => {
                   href="tel:+521234567890" 
                   className="text-gray-400 hover:text-gray-300 transition-colors duration-200"
                 >
-                  +52 123 456 7890
+                  +34 624 32 10 60
                 </a>
               </p>
               <p className="flex items-center justify-center sm:justify-start gap-3">
@@ -67,7 +67,7 @@ const Footer = () => {
                   href="mailto:info@carpinterometalico.com" 
                   className="text-gray-400 hover:text-gray-300 transition-colors duration-200 break-all"
                 >
-                  info@carpinterometalico.com
+                  info@cerluxe.es
                 </a>
               </p>
             </div>

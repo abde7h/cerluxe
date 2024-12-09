@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
 import Button from '@/components/ui/Button';
@@ -10,6 +10,16 @@ const Contacto: React.FC = () => {
   const [aceptaTerminos, setAceptaTerminos] = useState(false);
   const [modalAbierto, setModalAbierto] = useState(false);
   const [formError, setFormError] = useState('');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // Esto se ejecutará solo en el lado del cliente
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // O puedes retornar un loading spinner
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +51,6 @@ const Contacto: React.FC = () => {
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {/* Formulario - En móvil aparece segundo, en desktop primero */}
           <div className="order-2 md:order-1">
             <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
               <Input type="text" placeholder="Nombre" required />
@@ -66,7 +75,7 @@ const Contacto: React.FC = () => {
                   type="checkbox"
                   id="terminos"
                   checked={aceptaTerminos}
-                  onChange={(e) => setAceptaTerminos(e.checked)}
+                  onChange={(e) => setAceptaTerminos(e.target.checked)}
                   className="mt-1 cursor-pointer"
                 />
                 <label 
@@ -97,7 +106,6 @@ const Contacto: React.FC = () => {
             </form>
           </div>
 
-          {/* Mapa - En móvil aparece primero, en desktop segundo */}
           <div className="order-1 md:order-2 h-[250px] sm:h-[300px] md:h-full min-h-[400px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=..."

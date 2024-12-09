@@ -69,7 +69,7 @@ const Hero = () => {
           >
             Ver Servicios
           </Button>
-          <Link href="/contacto">
+          <Link href="/#contacto">
             <Button
               size="lg"
               className="bg-gray-700 hover:bg-gray-800 transition-colors duration-300 text-white font-semibold px-6 py-3 rounded-lg shadow-lg"

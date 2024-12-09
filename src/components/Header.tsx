@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Button from "@/components/ui/Button";
 import {
@@ -12,19 +13,18 @@ import {
 } from "@radix-ui/react-dropdown-menu";
 
 const servicios = [
+  { nombre: "Puertas y Ventanas", url: "/servicios/puertas-ventanas" },
   { nombre: "Cerrajería", url: "/servicios/cerrajeria" },
-  { nombre: "Puertas", url: "/servicios/puertas" },
-  { nombre: "Ventanas", url: "/servicios/ventanas" },
-  { nombre: "Rejas", url: "/servicios/rejas" },
-  { nombre: "Escaleras", url: "/servicios/escaleras" },
-  { nombre: "Estructuras", url: "/servicios/estructuras" },
-  { nombre: "Instalación y Mantenimiento", url: "/servicios/mantenimiento" },
+  { nombre: "Suministro y Mantenimiento de Estructuras", url: "/servicios/estructuras" },
+  { nombre: "Cerramientos", url: "/servicios/cerramientos" },
+  { nombre: "Persianas", url: "/servicios/persianas" },
+  { nombre: "Toldos", url: "/servicios/toldos" },
 ];
 
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export default function Header() {
@@ -36,31 +36,8 @@ export default function Header() {
     setIsServiciosOpen(false);
   }, []);
 
-  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    
-    const menuMobile = document.getElementById('mobile-menu');
-    if (menuMobile) {
-      menuMobile.style.opacity = '0';
-      menuMobile.style.transform = 'translateY(-10px)';
-    }
-
-    setTimeout(() => {
-      closeMenu();
-      if (href) {
-        if (href === '/#contacto') {
-          if (window.location.pathname === '/') {
-            const element = document.querySelector('#contacto');
-            element?.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            window.location.href = '/contacto';
-          }
-        } else {
-          window.location.href = href;
-        }
-      }
-    }, 300);
+  const handleNavClick = useCallback(() => {
+    closeMenu();
   }, [closeMenu]);
 
   useEffect(() => {
@@ -77,15 +54,15 @@ export default function Header() {
   return (
     <nav className="bg-gray-800 text-white fixed top-0 w-full z-20 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold">
-              <img
+              <Image
                 src="/assets/Logo.png"
                 alt="Logo"
-                width={70}
-                height={70}
+                width={90}
+                height={90}
                 className="mr-4"
               />
             </Link>
@@ -124,7 +101,7 @@ export default function Header() {
             <NavLink href="/galeria">Galería de Trabajos</NavLink>
             <NavLink href="/sobre-nosotros">Sobre Nosotros</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/#contacto">Contacto</NavLink>
+            <NavLink href="/app/contacto">Contacto</NavLink>
           </div>
 
           {/* Botón menú móvil */}
@@ -161,7 +138,7 @@ export default function Header() {
           <MobileNavLink href="/" onClick={handleNavClick}>
             Inicio
           </MobileNavLink>
-          
+
           <div className="pl-3">
             <button
               onClick={(e) => {
@@ -208,7 +185,7 @@ export default function Header() {
           <MobileNavLink href="/blog" onClick={handleNavClick}>
             Blog
           </MobileNavLink>
-          <MobileNavLink href="/#contacto" onClick={handleNavClick}>
+          <MobileNavLink href="/app/contacto" onClick={handleNavClick}>
             Contacto
           </MobileNavLink>
         </div>

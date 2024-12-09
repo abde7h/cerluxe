@@ -30,26 +30,20 @@ const GaleriaPage = () => {
   return (
     <section id="galeria" className="py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+        <h2 className="pt-16 text-2xl sm:text-3xl font-bold text-center mb-6">
           Galería de Proyectos
         </h2>
-        <div
-          className="grid gap-2 sm:gap-4"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-          }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative group cursor-pointer"
+              className="relative group cursor-pointer overflow-hidden rounded-md"
               onClick={() => openModal(index)}
             >
               <img
                 src={image}
                 alt={`Proyecto ${index + 1}`}
-                className="w-full h-auto object-cover rounded-md transition-transform duration-200 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
               />
             </div>
           ))}
