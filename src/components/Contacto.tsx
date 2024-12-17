@@ -7,10 +7,18 @@ import Button from "@/components/ui/Button";
 import TerminosModal from "./ui/TerminosModal";
 import emailjs from "@emailjs/browser";
 
+interface FormErrors {
+  user_name?: string;
+  user_email?: string;
+  user_phone?: string;
+  message?: string;
+  general?: string;
+}
+
 const Contacto: React.FC = () => {
   const [aceptaTerminos, setAceptaTerminos] = useState(false);
   const [modalAbierto, setModalAbierto] = useState(false);
-  const [formErrors, setFormErrors] = useState({
+  const [formErrors, setFormErrors] = useState<FormErrors>({
     user_name: "",
     user_email: "",
     user_phone: "",
@@ -23,7 +31,7 @@ const Contacto: React.FC = () => {
   const sanitizeInput = (value: string) => value.replace(/<[^>]*>/g, ""); // Elimina etiquetas HTML
 
   const validateForm = (formData: FormData) => {
-    const errors: any = {};
+    const errors: FormErrors = {};
     const userName = sanitizeInput(formData.get("user_name") as string);
     const userEmail = formData.get("user_email") as string;
     const userPhone = formData.get("user_phone") as string;
