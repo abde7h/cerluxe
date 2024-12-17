@@ -18,21 +18,21 @@ const servicios: Servicio[] = [
     imageUrl: '/assets/servicios/puertas.webp',
     title: 'Fabricación y montaje de puertas y ventanas',
     description: 'Diseñamos y fabricamos puertas y ventanas a medida para tu hogar o negocio.',
-    link: '/servicios/puertas-y-ventanas',
+    link: '/servicios/puertas-ventanas',
   },
   {
     id: 2,
     imageUrl:'/assets/servicios/cerrajeria.png',
     title: 'Instalación de cerrajería',
     description: 'Instalamos y reparamos todo tipo de cerraduras y sistemas de seguridad.',
-    link: '/servicios/instalacion-de-cerrajeria',
+    link: '/servicios/cerrajeria',
   },
   {
     id: 3,
     imageUrl: '/assets/servicios/mantenimiento.jpg',
     title: 'Fabricación y mantenimiento de estructuras',
     description: 'Fabricamos y realizamos mantenimiento preventivo y correctivo de estructuras metálicas.',
-    link: '/servicios/fabricacion-y-mantenimiento-de-estructuras',
+    link: '/servicios/estructuras',
   },
   {
     id: 4,
@@ -68,17 +68,20 @@ const Servicios = () => {
           {servicios.map((service) => (
             <Link key={service.id} href={service.link}>
               <Card 
-                className="hover:shadow-lg transition-shadow duration-300 rounded-lg overflow-hidden bg-white h-full flex flex-col"
+                className="group hover:shadow-xl transition-all duration-300 rounded-lg overflow-hidden bg-white h-full flex flex-col transform hover:-translate-y-2"
               >
-                <Image
-                  src={service.imageUrl} 
-                  alt={service.title} 
-                  className="w-full h-48 object-cover"
-                  width={500}
-                  height={200}
-                />
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={service.imageUrl} 
+                    alt={service.title} 
+                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    width={500}
+                    height={200}
+                  />
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                </div>
                 <CardContent className="p-6 flex-1">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 text-sm md:text-base">{service.description}</p>

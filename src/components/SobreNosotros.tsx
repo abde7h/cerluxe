@@ -53,7 +53,7 @@ const SobreNosotros = () => {
               Nuestra Historia de Excelencia
             </h2>
             <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-              Desde 2013, nos hemos dedicado a transformar espacios y crear soluciones 
+              Desde 2012, nos hemos dedicado a transformar espacios y crear soluciones 
               metálicas innovadoras que superan las expectativas de nuestros clientes.
             </p>
           </div>

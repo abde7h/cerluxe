@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -51,12 +51,12 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-center justify-center sm:justify-start gap-3 text-gray-400 hover:text-gray-300 transition-colors duration-200">
                 <MapPin size={20} className="flex-shrink-0" />
-                <span>Dirección del taller, Ciudad, CP</span>
+                <span>Calle Trencat 26 Bajo izquierda Rafelbunyol 46138</span>
               </p>
               <p className="flex items-center justify-center sm:justify-start gap-3">
                 <Phone size={20} className="flex-shrink-0 text-gray-400" />
                 <a 
-                  href="tel:+521234567890" 
+                  href="tel:+34 624 32 10 60" 
                   className="text-gray-400 hover:text-gray-300 transition-colors duration-200"
                 >
                   +34 624 32 10 60
@@ -65,7 +65,7 @@ const Footer = () => {
               <p className="flex items-center justify-center sm:justify-start gap-3">
                 <Mail size={20} className="flex-shrink-0 text-gray-400" />
                 <a 
-                  href="mailto:info@carpinterometalico.com" 
+                  href="mailto:info@cerluxe.es" 
                   className="text-gray-400 hover:text-gray-300 transition-colors duration-200 break-all"
                 >
                   info@cerluxe.es
@@ -75,6 +75,7 @@ const Footer = () => {
           </div>
 
           {/* Redes Sociales */}
+          {/* 
           <div className="text-center lg:text-left">
             <h3 className="text-xl font-semibold mb-6 text-gray-200">Síguenos</h3>
             <div className="flex justify-center lg:justify-start space-x-6">
@@ -94,6 +95,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          */}
         </div>
 
         {/* Línea divisoria */}

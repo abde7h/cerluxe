@@ -71,37 +71,38 @@ export default function Header() {
           {/* Navegación principal */}
           <div className="hidden sm:flex sm:space-x-8">
             <NavLink href="/">Inicio</NavLink>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="primary"
-                  className="hover:bg-gray-700 inline-flex items-center px-4 py-2 text-sm font-medium transition duration-200"
+            <div className="relative">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="primary"
+                    className="hover:bg-gray-700 inline-flex items-center px-4 py-2 text-sm font-medium transition duration-200"
+                  >
+                    Servicios
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="start"
+                  className="z-50 py-2 w-48 bg-gray-800 text-white border border-gray-700 shadow-lg"
                 >
-                  Servicios
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="start"
-                className="z-50 py-2 w-48 bg-gray-800 text-white border border-gray-700 shadow-lg"
-              >
-                {servicios.map((servicio) => (
-                  <DropdownMenuItem key={servicio.url} asChild>
-                    <Link
-                      href={servicio.url}
-                      className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-150"
-                    >
-                      {servicio.nombre}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
+                  {servicios.map((servicio) => (
+                    <DropdownMenuItem key={servicio.url} asChild>
+                      <Link
+                        href={servicio.url}
+                        className="block px-4 py-2 hover:bg-gray-700 transition-colors duration-150"
+                      >
+                        {servicio.nombre}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
             <NavLink href="/galeria">Galería de Trabajos</NavLink>
             <NavLink href="/sobre-nosotros">Sobre Nosotros</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/app/contacto">Contacto</NavLink>
+            <NavLink href="/contacto">Contacto</NavLink>
           </div>
 
           {/* Botón menú móvil */}
