@@ -4,10 +4,6 @@ import Link from 'next/link';
 import PresupuestoButton from '@/components/ui/PresupuestoButton';
 import { Phone, Clock, MapPin, Mail } from 'lucide-react';
 
-interface Props {
-  params: { ciudad: string };
-}
-
 // Función auxiliar para obtener la información de la ciudad
 async function getCiudadInfo(ciudadSlug: string) {
   'use server';
@@ -20,7 +16,7 @@ async function getCiudadInfo(ciudadSlug: string) {
 }
 
 export async function generateMetadata(
-  { params }: Props
+  { params }: { params: { ciudad: string } }
 ): Promise<Metadata> {
   const ciudadInfo = await getCiudadInfo(params.ciudad);
 
@@ -35,26 +31,26 @@ export async function generateMetadata(
     title: `Cerrajero 24h y Carpintería Metálica en ${ciudadInfo.ciudad} | Cerluxe`,
     description: `Cerrajero urgente 24 horas en ${ciudadInfo.ciudad}. Servicios de carpintería metálica, cerrajería, toldos y persianas. ${ciudadInfo.localidad.servicios.join(', ')}. Presupuesto sin compromiso.`,
     alternates: {
-      canonical: `https://cerluxe.es/localidades/${params.ciudad.toLowerCase()}`,
+      canonical: `https://cerluxe.es/localidades/${params.ciudad.toLowerCase()}`
     },
     openGraph: {
       title: `Cerrajero 24h en ${ciudadInfo.ciudad} | Servicios de Cerrajería`,
       description: `Cerrajero urgente en ${ciudadInfo.ciudad}. Apertura de puertas 24h, cambio de cerraduras, servicios de carpintería metálica. Presupuesto sin compromiso.`,
       locale: 'es_ES',
-      type: 'website',
+      type: 'website'
     },
     robots: {
       index: true,
       follow: true,
       googleBot: {
         index: true,
-        follow: true,
-      },
-    },
+        follow: true
+      }
+    }
   };
 }
 
-export default async function LocalidadPage({ params }: Props) {
+export default async function LocalidadPage({ params }: { params: { ciudad: string } }) {
   const ciudadInfo = await getCiudadInfo(params.ciudad);
 
   if (!ciudadInfo.localidad) {
@@ -93,7 +89,7 @@ export default async function LocalidadPage({ params }: Props) {
             Nuestros Servicios en {ciudadInfo.ciudad}
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ciudadInfo.localidad.servicios.map((servicio, index) => (
+            {ciudadInfo.localidad.servicios.map((servicio: string, index: number) => (
               <li key={index}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{servicio}</h3>
@@ -149,21 +145,23 @@ export default async function LocalidadPage({ params }: Props) {
           </h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { 
-                icon: Phone, 
-                title: 'Teléfono 24h', 
+              {
+                icon: Phone,
+                title: 'Teléfono 24h',
                 content: (
                   <address>
-                    <a href={`tel:${siteMetadata.serviciosUrgencia.telefono24h}`} 
-                       className="text-gray-900 hover:underline text-xl font-medium tracking-wider">
+                    <a
+                      href={`tel:${siteMetadata.serviciosUrgencia.telefono24h}`}
+                      className="text-gray-900 hover:underline text-xl font-medium tracking-wider"
+                    >
                       {siteMetadata.serviciosUrgencia.telefono24h}
                     </a>
                   </address>
                 )
               },
-              { 
-                icon: Clock, 
-                title: 'Horario', 
+              {
+                icon: Clock,
+                title: 'Horario',
                 content: (
                   <time>
                     <p className="text-gray-700">{siteMetadata.horarios.cerrajeria.normal}</p>
@@ -171,9 +169,9 @@ export default async function LocalidadPage({ params }: Props) {
                   </time>
                 )
               },
-              { 
-                icon: MapPin, 
-                title: 'Zona', 
+              {
+                icon: MapPin,
+                title: 'Zona',
                 content: (
                   <address className="not-italic">
                     <p className="text-gray-700">{ciudadInfo.ciudad}</p>
@@ -181,18 +179,20 @@ export default async function LocalidadPage({ params }: Props) {
                   </address>
                 )
               },
-              { 
-                icon: Mail, 
-                title: 'Email', 
+              {
+                icon: Mail,
+                title: 'Email',
                 content: (
                   <address>
-                    <a href="mailto:info@cerluxe.es" 
-                       className="text-gray-900 hover:underline font-medium">
+                    <a
+                      href="mailto:info@cerluxe.es"
+                      className="text-gray-900 hover:underline font-medium"
+                    >
                       info@cerluxe.es
                     </a>
                   </address>
                 )
-              },
+              }
             ].map((item, index) => (
               <li key={index}>
                 <article className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center border border-gray-200">
