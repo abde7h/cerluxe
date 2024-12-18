@@ -5,19 +5,16 @@ import PresupuestoButton from '@/components/ui/PresupuestoButton';
 import { Phone, Clock, MapPin, Mail } from 'lucide-react';
 
 interface Props {
-  params: {
-    ciudad: Promise<string>;
-  };
+  params: { ciudad: string };
 }
 
 // Función auxiliar para obtener la información de la ciudad
-async function getCiudadInfo(ciudadSlug: string | Promise<string>) {
+async function getCiudadInfo(ciudadSlug: string) {
   'use server';
-  const ciudad = await ciudadSlug;
   return {
-    ciudad: ciudad.charAt(0).toUpperCase() + ciudad.slice(1),
+    ciudad: ciudadSlug.charAt(0).toUpperCase() + ciudadSlug.slice(1),
     localidad: siteMetadata.localidades.find(
-      l => l.nombre.toLowerCase() === ciudad.toLowerCase()
+      l => l.nombre.toLowerCase() === ciudadSlug.toLowerCase()
     )
   };
 }
@@ -26,7 +23,6 @@ export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
   const ciudadInfo = await getCiudadInfo(params.ciudad);
-  const ciudadSlug = await params.ciudad;
 
   if (!ciudadInfo.localidad) {
     return {
@@ -37,9 +33,9 @@ export async function generateMetadata(
 
   return {
     title: `Cerrajero 24h y Carpintería Metálica en ${ciudadInfo.ciudad} | Cerluxe`,
-    description: `�� Cerrajero urgente 24 horas en ${ciudadInfo.ciudad}. Servicios de carpintería metálica, cerrajería, toldos y persianas. ${ciudadInfo.localidad.servicios.join(', ')}. Presupuesto sin compromiso.`,
+    description: `Cerrajero urgente 24 horas en ${ciudadInfo.ciudad}. Servicios de carpintería metálica, cerrajería, toldos y persianas. ${ciudadInfo.localidad.servicios.join(', ')}. Presupuesto sin compromiso.`,
     alternates: {
-      canonical: `https://cerluxe.es/localidades/${ciudadSlug.toLowerCase()}`,
+      canonical: `https://cerluxe.es/localidades/${params.ciudad.toLowerCase()}`,
     },
     openGraph: {
       title: `Cerrajero 24h en ${ciudadInfo.ciudad} | Servicios de Cerrajería`,
@@ -245,7 +241,7 @@ export default async function LocalidadPage({ params }: Props) {
               "latitude": "39.5889",
               "longitude": "-0.3762"
             },
-            "url": `https://cerluxe.es/localidades/${(await params.ciudad).toLowerCase()}`,
+            "url": `https://cerluxe.es/localidades/${params.ciudad.toLowerCase()}`,
             "telephone": siteMetadata.serviciosUrgencia.telefono24h,
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
