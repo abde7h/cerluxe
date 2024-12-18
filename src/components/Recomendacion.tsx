@@ -29,7 +29,7 @@ const Recomendacion = () => {
           </div>
           <h3 className="text-xl font-semibold mb-2 text-gray-800">Es Gratis</h3>
           <p className="text-gray-600">
-            Si quieres un presupuesto para una reja, puerta, etc. te daremos un <strong>presupuesto Gratis</strong> en pocas horas.
+            Si quieres un presupuesto para una reja, puerta, etc. te daremos un <strong>presupuesto Gratis</strong>.
           </p>
         </div>
         <div className="bg-white shadow-lg rounded-lg p-6 transform hover:scale-105 transition-transform duration-300">

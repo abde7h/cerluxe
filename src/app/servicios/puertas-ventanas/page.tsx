@@ -12,7 +12,7 @@ export default function PuertasVentanasPage() {
         </h1>
         <div className="max-w-4xl mx-auto">
           <p className="text-xl text-gray-700 text-center mb-16 leading-relaxed">
-            Fabricación e instalación de puertas y ventanas de alta calidad. 
+            Suministro e instalación de puertas y ventanas de alta calidad. 
             Soluciones personalizadas que combinan seguridad, eficiencia 
             energética y diseño para tu hogar o negocio.
           </p>
@@ -75,21 +75,21 @@ export default function PuertasVentanasPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <FaShieldAlt className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Seguridad</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Seguridad</h3>
               <p className="text-gray-600">
                 Sistemas de seguridad avanzados y materiales resistentes.
               </p>
             </div>
             <div className="text-center">
               <FaHome className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Eficiencia</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Eficiencia</h3>
               <p className="text-gray-600">
                 Máximo aislamiento térmico y acústico garantizado.
               </p>
             </div>
             <div className="text-center">
               <FaTools className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Durabilidad</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Durabilidad</h3>
               <p className="text-gray-600">
                 Materiales de primera calidad con garantía extendida.
               </p>

@@ -16,8 +16,8 @@ const servicios: Servicio[] = [
   {
     id: 1,
     imageUrl: '/assets/servicios/puertas.webp',
-    title: 'Fabricación y montaje de puertas y ventanas',
-    description: 'Diseñamos y fabricamos puertas y ventanas a medida para tu hogar o negocio.',
+    title: 'Suministro y montaje de puertas y ventanas',
+    description: 'Suministro y montaje de puertas y ventanas a medida para tu hogar o negocio.',
     link: '/servicios/puertas-ventanas',
   },
   {
@@ -30,8 +30,8 @@ const servicios: Servicio[] = [
   {
     id: 3,
     imageUrl: '/assets/servicios/mantenimiento.jpg',
-    title: 'Fabricación y mantenimiento de estructuras',
-    description: 'Fabricamos y realizamos mantenimiento preventivo y correctivo de estructuras metálicas.',
+    title: 'Suministro y mantenimiento de estructuras',
+    description: 'Suministro y mantenimiento preventivo y correctivo de estructuras metálicas.',
     link: '/servicios/estructuras',
   },
   {

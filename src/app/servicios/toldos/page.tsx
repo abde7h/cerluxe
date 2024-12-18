@@ -75,21 +75,21 @@ export default function ToldosPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <FaShieldAlt className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Protección UV</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Protección UV</h3>
               <p className="text-gray-600">
                 Tejidos de alta calidad con protección solar certificada.
               </p>
             </div>
             <div className="text-center">
               <FaCog className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Automatización</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Automatización</h3>
               <p className="text-gray-600">
                 Sistemas inteligentes para máximo confort y eficiencia.
               </p>
             </div>
             <div className="text-center">
               <FaUmbrella className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Versatilidad</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Versatilidad</h3>
               <p className="text-gray-600">
                 Soluciones adaptadas a cada espacio y necesidad.
               </p>

@@ -12,7 +12,7 @@ export default function EstructurasPage() {
         </h1>
         <div className="max-w-4xl mx-auto">
           <p className="text-xl text-gray-700 text-center mb-16 leading-relaxed">
-            Diseñamos y fabricamos estructuras metálicas de alta calidad para todo tipo de proyectos. 
+            Diseñamos y suministramos estructuras metálicas de alta calidad para todo tipo de proyectos. 
             Combinamos innovación técnica con durabilidad y seguridad para crear soluciones 
             que superan las expectativas.
           </p>
@@ -75,7 +75,7 @@ export default function EstructurasPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <FaShieldAlt className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Máxima Resistencia</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Máxima Resistencia</h3>
               <p className="text-gray-600">
                 Estructuras calculadas y diseñadas para garantizar la máxima 
                 seguridad y durabilidad.
@@ -83,14 +83,14 @@ export default function EstructurasPage() {
             </div>
             <div className="text-center">
               <FaTools className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Profesionalidad</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Profesionalidad</h3>
               <p className="text-gray-600">
                 Equipo técnico especializado con amplia experiencia en el sector.
               </p>
             </div>
             <div className="text-center">
               <FaIndustry className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Personalización</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Personalización</h3>
               <p className="text-gray-600">
                 Adaptamos cada proyecto a las necesidades específicas del cliente.
               </p>

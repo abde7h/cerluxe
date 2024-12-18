@@ -12,7 +12,7 @@ export default function CerrajeriaPage() {
         </h1>
         <div className="max-w-4xl mx-auto">
           <p className="text-xl text-gray-700 text-center mb-16 leading-relaxed">
-            Ofrecemos servicios profesionales de cerrajería con más de 20 años de experiencia. 
+            Ofrecemos servicios profesionales de cerrajería con más de 15 años de experiencia. 
             Garantizamos calidad, seguridad y atención personalizada en cada trabajo.
           </p>
         </div>

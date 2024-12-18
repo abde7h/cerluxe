@@ -11,7 +11,7 @@ export default function CerramientosPage() {
         </h1>
         <div className="max-w-4xl mx-auto">
           <p className="text-xl text-gray-700 text-center mb-16 leading-relaxed">
-            Especialistas en diseño, fabricación e instalación de cerramientos metálicos 
+            Especialistas en diseño, suministro e instalación de cerramientos metálicos 
             de alta calidad. Más de dos décadas creando espacios seguros y estéticos 
             para hogares y negocios.
           </p>
@@ -77,7 +77,7 @@ export default function CerramientosPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <FaShieldAlt className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Calidad Garantizada</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Calidad Garantizada</h3>
               <p className="text-gray-600">
                 Utilizamos materiales de primera calidad y ofrecemos garantía en 
                 todos nuestros trabajos.
@@ -85,14 +85,14 @@ export default function CerramientosPage() {
             </div>
             <div className="text-center">
               <FaTools className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Experiencia</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Experiencia</h3>
               <p className="text-gray-600">
                 Más de 20 años en el sector nos avalan. Personal altamente cualificado.
               </p>
             </div>
             <div className="text-center">
               <FaHome className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Personalización</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Personalización</h3>
               <p className="text-gray-600">
                 Diseños a medida adaptados a tus necesidades y preferencias.
               </p>

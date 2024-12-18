@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import PresupuestoButton from '@/components/ui/PresupuestoButton';
 
 const ComoElegirPuerta = () => {
   return (
@@ -7,7 +8,7 @@ const ComoElegirPuerta = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 mt-20">Cómo elegir la puerta perfecta para tu hogar</h1>
         <Image
-          src="/assets/blog/puerta.jpg"
+          src="/assets/blog/puerta1.jpg"
           alt="Puerta perfecta"
           width={800}
           height={400}
@@ -23,13 +24,6 @@ const ComoElegirPuerta = () => {
             <p className="text-gray-700 mb-4">
               Las puertas pueden estar hechas de diferentes materiales, como madera, acero, o fibra de vidrio. Cada material tiene sus propias ventajas y desventajas. Por ejemplo, las puertas de madera son estéticamente agradables, pero requieren más mantenimiento.
             </p>
-            <Image
-              src="/assets/blog/materiales.jpg"
-              alt="Materiales de puertas"
-              width={400}
-              height={300}
-              className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
-            />
           </div>
           
           <div>
@@ -37,25 +31,22 @@ const ComoElegirPuerta = () => {
             <p className="text-gray-700 mb-4">
               El estilo de la puerta debe complementar la arquitectura de tu hogar. Considera si prefieres un diseño moderno, clásico o rústico. También puedes personalizar la puerta con diferentes acabados y colores.
             </p>
-            <Image
-              src="/assets/blog/estilos.jpg"
-              alt="Estilos de puertas"
-              width={400}
-              height={300}
-              className="w-full h-48 object-cover rounded-lg shadow-md mb-4"
-            />
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mt-6 mb-4 text-gray-800">3. Seguridad</h2>
+            <p className="text-gray-700 mb-4">
+              La seguridad es un factor crucial al elegir una puerta. Asegúrate de que la puerta tenga buenas cerraduras y, si es posible, considera puertas reforzadas o de seguridad.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mt-6 mb-4 text-gray-800">4. Aislamiento Térmico y Acústico</h2>
+            <p className="text-gray-700 mb-4">
+              Una buena puerta debe ofrecer aislamiento térmico y acústico. Esto no solo mejora la eficiencia energética de tu hogar, sino que también reduce el ruido exterior.
+            </p>
           </div>
         </div>
-
-        <h2 className="text-2xl font-semibold mt-6 mb-4 text-gray-800">3. Seguridad</h2>
-        <p className="text-gray-700 mb-4">
-          La seguridad es un factor crucial al elegir una puerta. Asegúrate de que la puerta tenga buenas cerraduras y, si es posible, considera puertas reforzadas o de seguridad.
-        </p>
-
-        <h2 className="text-2xl font-semibold mt-6 mb-4 text-gray-800">4. Aislamiento Térmico y Acústico</h2>
-        <p className="text-gray-700 mb-4">
-          Una buena puerta debe ofrecer aislamiento térmico y acústico. Esto no solo mejora la eficiencia energética de tu hogar, sino que también reduce el ruido exterior.
-        </p>
 
         <h2 className="text-2xl font-semibold mt-6 mb-4 text-gray-800">Conclusión</h2>
         <p className="text-gray-700 mb-4">
@@ -63,9 +54,7 @@ const ComoElegirPuerta = () => {
         </p>
 
         <div className="text-center mt-8">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200">
-            Ver más opciones
-          </button>
+          <PresupuestoButton />
         </div>
       </div>
     </section>

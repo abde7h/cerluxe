@@ -74,21 +74,21 @@ export default function PersianasPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <FaShieldAlt className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Seguridad</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Seguridad</h3>
               <p className="text-gray-600">
                 Sistemas de seguridad avanzados para proteger tu hogar o negocio.
               </p>
             </div>
             <div className="text-center">
               <FaSun className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Eficiencia Energética</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Eficiencia Energética</h3>
               <p className="text-gray-600">
                 Control térmico y lumínico para mayor ahorro energético.
               </p>
             </div>
             <div className="text-center">
               <FaCog className="text-4xl text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Automatización</h3>
+              <h3 className="text-xl text-gray-800 font-semibold mb-2">Automatización</h3>
               <p className="text-gray-600">
                 Sistemas inteligentes para mayor comodidad y control.
               </p>
