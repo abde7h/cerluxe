@@ -102,9 +102,9 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8">
           {/* Logo y Copyright */}
           <div className="flex flex-col items-center space-y-6">
-            <div className="relative w-[120px] h-24 sm:h-28 md:h-32">
+            <div className="relative w-[180px] h-32 sm:h-36 md:h-40">
               <Image
-                src="/assets/Logo.png"
+                src="/assets/Logo-footer.png"
                 alt="Logo"
                 fill
                 className="transition-transform duration-300 hover:scale-105 object-contain"
@@ -112,7 +112,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-center text-sm md:text-base text-gray-400">
-              &copy; {new Date().getFullYear()} Carpintero Metálico
+              &copy; {new Date().getFullYear()} Cerluxe
               <span className="block sm:inline sm:ml-1">
                 Todos los derechos reservados.
               </span>

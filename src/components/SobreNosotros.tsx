@@ -90,7 +90,7 @@ const SobreNosotros = () => {
 
             <div className="relative h-[400px] w-full">
               <Image
-                src="/assets/about/team.jpg"
+                src="/assets/about/team.webp"
                 alt="Nuestro equipo trabajando"
                 fill
                 className="rounded-lg shadow-xl object-cover"
