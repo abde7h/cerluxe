@@ -87,7 +87,7 @@ export default function CerramientosPage() {
               <FaTools className="text-4xl text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl text-gray-800 font-semibold mb-2">Experiencia</h3>
               <p className="text-gray-600">
-                Más de 20 años en el sector nos avalan. Personal altamente cualificado.
+                Más de 10 años en el sector nos avalan. Personal altamente cualificado.
               </p>
             </div>
             <div className="text-center">
